@@ -118,6 +118,24 @@
 				font-size: var(--fs-700);
 			}
 		}
+		.travelList {
+			&__title {
+				font-size: var(--title-700);
+			}
+			p {
+				font-size: var(--fs-700);
+			}
+			&__second-title {
+				font-size: var(--title-400);
+			}
+
+			&__search {
+				width: 500px;
+			}
+			&__place-title {
+				font-size: var(--title-100);
+			}
+		}
 		.footer {
 			&__info {
 				justify-content: center;

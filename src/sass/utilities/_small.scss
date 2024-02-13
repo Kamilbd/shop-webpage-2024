@@ -93,5 +93,25 @@
 				font-size: var(--fs-400);
 			}
 		}
+		.travelList {
+			&__title {
+				font-size: var(--title-400);
+			}
+			p {
+				font-size: var(--fs-400);
+			}
+			&__second-title {
+				margin: 1em;
+				color: var(--cream);
+				font-size: var(--title-400);
+				text-transform: uppercase;
+			}
+			&__place-title {
+				font-size: var(--title-50);
+			}
+			&__search {
+				width: 370px;
+			}
+		}
 	}
 }
