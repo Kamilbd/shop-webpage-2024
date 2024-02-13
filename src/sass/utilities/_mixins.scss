@@ -1,0 +1,39 @@
+@mixin aboutu-rotates-right {
+	@keyframes transform-circle-one {
+		0% {
+			right: -20%;
+			bottom: 40%;
+			// transform: translate(0, 100%);
+		}
+		50% {
+			right: 10%;
+			bottom: 10%;
+		}
+		70% {
+			right: 10%;
+			bottom: 40%;
+		}
+		100% {
+			right: -20%;
+		}
+	}
+}
+@mixin aboutus-rotate-left {
+	@keyframes transform-circle-two {
+		0% {
+			left: -20%;
+			bottom: 40%;
+		}
+		50% {
+			left: 10%;
+			top: 10%;
+		}
+		70% {
+			left: 10%;
+			top: 40%;
+		}
+		100% {
+			left: -20%;
+		}
+	}
+}

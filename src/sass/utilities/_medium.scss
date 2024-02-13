@@ -1,0 +1,132 @@
+@mixin medium {
+	@media screen and (min-width: 768px) {
+		.nav {
+			&__link,
+			&__links-col {
+				font-size: var(--fs-400);
+			}
+		}
+		.header {
+			&::before {
+				background: none;
+				border-right: 0vw solid transparent;
+				border-bottom: 100vh solid rgba(0, 0, 0, 0.568);
+			}
+			&__text-box {
+				max-width: 600px;
+			}
+			&__title {
+				font-size: var(--title-700);
+			}
+			&__text {
+				max-width: 600px;
+				font-size: var(--title-400);
+			}
+			&__link {
+				font-size: var(--fs-700);
+			}
+		}
+		.topPlaces {
+			&__title {
+				padding: 2em 1em;
+				color: var(--cream);
+				font-size: var(--title-700);
+				text-align: center;
+			}
+			&__cards-box {
+				max-width: 700px;
+			}
+			&__card {
+				max-width: 320px;
+			}
+			&__second-title {
+				color: var(--cream);
+				font-size: var(--title-400);
+			}
+			&__columns-box {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+			&__column-info {
+				margin: 2em;
+				transition: transform 0.3s, box-shadow 0.3s;
+			}
+			&__column-info:hover {
+				box-shadow: 0 0 15px black;
+				transform: scale(0.9);
+			}
+			&__column-text {
+				font-size: var(--fs-700);
+			}
+		}
+		.aboutus {
+			&__title {
+				font-size: var(--title-700);
+			}
+			&__info-box {
+				padding: 2em;
+				max-width: 90%;
+			}
+			&__text-box {
+				max-height: none;
+				overflow: visible;
+			}
+			&__btn {
+				display: none;
+			}
+			&__text {
+				font-size: var(--fs-700);
+			}
+			&__person {
+				margin: 0 2em;
+				padding: 2em 1em;
+			}
+			&__person-info {
+				margin-bottom: 2em;
+				// flex-direction: row-reverse;
+			}
+			&__person-name {
+				font-size: var(--fs-700);
+			}
+		}
+		.contact {
+			&__title {
+				font-size: var(--title-700);
+			}
+			&__text {
+				font-size: var(--fs-700);
+			}
+			&__form-title {
+				font-size: var(--title-100);
+			}
+			&__label {
+				font-size: var(--fs-700);
+			}
+			&__input {
+				font-size: var(--fs-700);
+			}
+			&__textarea {
+				max-width: 500px;
+			}
+			&__error-text {
+				font-size: var(--fs-200);
+			}
+			&__popup {
+				max-width: 600px;
+			}
+			&__popup &__text {
+				font-size: var(--fs-700);
+			}
+		}
+		.footer {
+			&__info {
+				justify-content: center;
+				max-width: 450px;
+			}
+			&__links {
+				margin-right: 2em;
+			}
+		}
+		//
+	}
+}

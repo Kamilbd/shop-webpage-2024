@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Portal podróżniczy Travel.pl - inspirujące artykuły, porady i informacje o najciekawszych miejscach na świecie. Zaplanuj swoją wymarzoną podróż z nami!"
+			keywords="podróże, podróżowanie, destynacje, wakacje, porady podróżnicze, atrakcje turystyczne"
+			author="Kamil B"
+			robots="index, follow" />
+		<title>Travvel</title>
+
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+	rel="stylesheet" />
+<link rel="stylesheet" href="/dist/css/main.min.css" />
+
+	</head>
+	<body>
+		<nav class="nav">
+	<a class="nav__link nav__home" href="./index.html">Travel.pl</a>
+	<div class="nav__links">
+		<div class="nav__btn-destinations">
+			<a class="nav__links-col"
+				>Wycieczki <img src="/dist/img/arrow-right.svg" alt="Ikona strzałki" class="nav__arrow"
+			/></a>
+
+			<div class="nav__destinations-box">
+				<a class="nav__link" href="./index.html#topPlaces">Top 4</a>
+				<a class="nav__link" href="./places.html#category">Kategorie</a>
+			</div>
+		</div>
+		<a class="nav__link" href="./index.html#aboutus">O Nas</a>
+		<a class="nav__link" href="./index.html#contact">Kontakt</a>
+		<a class="nav__link">Last minute</a>
+		<button class="nav__btn-close nav__btn">
+			<img class="nav__icon" src="/dist/img/navClose.svg" alt="Ikona zamknięcia" />
+		</button>
+	</div>
+	<div class="nav__btns">
+		<button class="nav__btn-menu nav__btn">
+			<img class="nav__icon" src="/dist/img/navMenu.svg" alt="Ikona menu" />
+		</button>
+	</div>
+</nav>
+
+		<header class="header">
+	<div class="header__text-container">
+		<div class="header__text-box" data-aos="fade-up">
+			<h1 class="header__title">Tam, Gdzie Zaczyna Się Każda Podróż</h1>
+			<p class="header__text">
+				Odkrywaj, marz, podróżuj z nami! Niezapomniane doświadczenia czekają. Wyrusz w podróż życia już dziś!
+			</p>
+			<a class="header__link" href="./index.html#contact"><span> Skontaktuj się z nami</span></a>
+		</div>
+	</div>
+</header>
+
+		<main>
+			<section class="topPlaces" id="topPlaces">
+				<h2 class="topPlaces__title" data-aos="zoom-in-down">Najlepsze w tym tygodniu</h2>
+				<div class="topPlaces__cards-box topPlaces__autoplay-slick">
+					<div class="topPlaces__card">
+						<div class="topPlaces__info">
+							<p class="topPlaces__text">San Francisco</p>
+							<img class="topPlaces__arrow" src="/dist/img/navArrow.svg" alt="arrow" />
+						</div>
+						<div class="topPlaces__more-info">
+							<p class="topPlaces__text">
+								Miasto pełne historii i różnorodności. Odkryj ikoniczne atrakcje, muzea i kulturową scenę tego miejsca.
+							</p>
+							<button class="topPlaces__btn">Sprawdź</button>
+							<div class="topPlaces__shadow"></div>
+						</div>
+						<img class="topPlaces__img" src="/dist/img/place-7.jpg" alt="" />
+					</div>
+					<div class="topPlaces__card">
+						<div class="topPlaces__info">
+							<p class="topPlaces__text">Himalaje</p>
+							<img class="topPlaces__arrow" src="/dist/img/navArrow.svg" alt="arrow" />
+						</div>
+						<div class="topPlaces__more-info">
+							<p class="topPlaces__text">
+								Miasto pełne historii i różnorodności. Odkryj ikoniczne atrakcje, muzea i kulturową scenę tego miejsca.
+							</p>
+							<button class="topPlaces__btn">Sprawdź</button>
+							<div class="topPlaces__shadow"></div>
+						</div>
+						<img class="topPlaces__img" src="/dist/img/place-3.jpg" alt="" />
+					</div>
+					<div class="topPlaces__card">
+						<div class="topPlaces__info">
+							<p class="topPlaces__text">Dubaj</p>
+							<img class="topPlaces__arrow" src="/dist/img/navArrow.svg" alt="arrow" />
+						</div>
+						<div class="topPlaces__more-info">
+							<p class="topPlaces__text">
+								Miasto pełne historii i różnorodności. Odkryj ikoniczne atrakcje, muzea i kulturową scenę tego miejsca.
+							</p>
+							<button class="topPlaces__btn">Sprawdź</button>
+							<div class="topPlaces__shadow"></div>
+						</div>
+						<img class="topPlaces__img" src="/dist/img/place-4.jpg" alt="" />
+					</div>
+					<div class="topPlaces__card">
+						<div class="topPlaces__info">
+							<p class="topPlaces__text">Grecja</p>
+							<img class="topPlaces__arrow" src="/dist/img/navArrow.svg" alt="arrow" />
+						</div>
+						<div class="topPlaces__more-info">
+							<p class="topPlaces__text">
+								Miasto pełne historii i różnorodności. Odkryj ikoniczne atrakcje, muzea i kulturową scenę tego miejsca.
+							</p>
+							<button class="topPlaces__btn">Sprawdź</button>
+							<div class="topPlaces__shadow"></div>
+						</div>
+						<img class="topPlaces__img" src="/dist/img/place-8.jpg" alt="" />
+					</div>
+				</div>
+
+				<h3 class="topPlaces__second-title" data-aos="zoom-in-down">Dlaczego warto wybrać naszą <span>ofertę</span></h3>
+				<div class="topPlaces__columns-box" data-aos="fade-up" data-aos-duration="1000">
+					<div class="topPlaces__column-info">
+						<img class="topPlaces__icon" src="/dist/img/star.svg" alt="" class="topPlaces_icon" />
+						<h4 class="topPlaces__column-title">Szeroki wybór produktów</h4>
+						<p class="topPlaces__column-text">
+							Nasza strona oferuje szeroki asortyment produktów, który spełni oczekiwania nawet najbardziej wymagających
+							klientów. Znajdziesz u nas wszystko, czego potrzebujesz w jednym miejscu.
+						</p>
+					</div>
+					<div class="topPlaces__column-info">
+						<img class="topPlaces__icon" src="/dist/img/partners-meet-client.svg" alt="" class="topPlaces_icon" />
+						<h4 class="topPlaces__column-title">Profesjonalna obsługa klienta</h4>
+						<p class="topPlaces__column-text">
+							Nasz zespół doświadczonych specjalistów jest gotowy służyć Ci pomocą w każdej kwestii. Dbamy o
+							indywidualne podejście do każdego klienta i zapewniamy szybką i efektywną obsługę.
+						</p>
+					</div>
+					<div class="topPlaces__column-info">
+						<img class="topPlaces__icon" src="/dist/img/badge.svg" alt="" class="topPlaces_icon" />
+						<h4 class="topPlaces__column-title">Konkurencyjne ceny</h4>
+						<p class="topPlaces__column-text">
+							U nas zawsze możesz liczyć na atrakcyjne ceny i korzystne promocje. Dążymy do zapewnienia najlepszych
+							warunków zakupów, abyś mógł oszczędzać bez rezygnacji z jakości.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="aboutus" id="aboutus">
+				<h2 class="aboutus__title" data-aos="fade-down">O nas</h2>
+				<div class="aboutus__info-box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+					>
+					<p class="aboutus__text">
+						Firma Traveel.pl to dynamicznie rozwijające się przedsiębiorstwo specjalizujące się w organizacji podróży
+						oraz świadczeniu usług turystycznych na najwyższym poziomie. Nasza misja to zapewnienie niezapomnianych
+						doświadczeń podróżniczych naszym klientom, niezależnie od ich preferencji czy budżetu.
+					</p>
+					<div class="aboutus__text-box">
+						<p class="aboutus__text">
+							Dzięki wieloletniemu doświadczeniu naszego zespołu oraz partnerskiej współpracy z renomowanymi dostawcami
+							usług turystycznych, jesteśmy w stanie zaoferować szeroki wachlarz atrakcyjnych ofert, dopasowanych do
+							indywidualnych potrzeb każdego klienta.
+						</p>
+						<p class="aboutus__text">
+							Nasze usługi obejmują kompleksową organizację podróży krajowych i zagranicznych, rezerwację noclegów,
+							bilety lotnicze, wycieczki fakultatywne, transfery oraz wiele innych dodatkowych atrakcji. Dbamy o każdy
+							szczegół naszych wyjazdów, aby zapewnić naszym klientom pełen komfort oraz satysfakcję z podróży.
+						</p>
+						<p class="aboutus__text">
+							Pragniemy być dla naszych klientów nie tylko biurem podróży, ale również zaufanym partnerem, który służy
+							pomocą i doradztwem na każdym etapie planowania i realizacji ich podróży marzeń. Naszym celem jest
+							sprawienie, aby każda podróż z Traveel.pl była niezapomnianym przeżyciem, pełnym niepowtarzalnych wrażeń i
+							pozytywnych emocji.
+						</p>
+					</div>
+					<button class="aboutus__btn" onclick="aboutusHandlebtn()">Pokaż więcej</button>
+				</div>
+				<div class="aboutus__animation-box">
+					<div class="aboutus__circle-block aboutus__circle-block--one"></div>
+					<div class="aboutus__circle-block aboutus__circle-block--two"></div>
+				</div>
+				<h2 class="aboutus__title" data-aos="fade-down">Opinie</h2>
+				<div class="aboutus__persons aboutus__slick">
+					<div class="aboutus__person" data-aos="fade-right">
+						<div class="aboutus__person-info">
+							<div class="aboutus__person-data">
+								<img class="aboutus__person-img" src="/dist/img/person-male.svg" alt="Icon person" />
+								<h3 class="aboutus__person-name">Jan Kowalski</h3>
+							</div>
+							<p class="aboutus__text">
+								"Dzięki Traveel.pl udało mi się zrealizować wymarzoną podróż bez żadnych problemów. Bardzo polecam!"
+							</p>
+						</div>
+					</div>
+					<div class="aboutus__person" data-aos="fade-left">
+						<div class="aboutus__person-info">
+							<div class="aboutus__person-data">
+								<img class="aboutus__person-img" src="/dist/img/person-female.svg" alt="Icon person" />
+								<h3 class="aboutus__person-name">Anna Nowak</h3>
+							</div>
+							<p class="aboutus__text">
+								"Obsługa klienta na najwyższym poziomie, świetna organizacja i niezapomniane wrażenia z podróży.
+								Traveel.pl zawsze będzie moim wyborem!"
+							</p>
+						</div>
+					</div>
+					<div class="aboutus__person" data-aos="fade-right">
+						<div class="aboutus__person-info">
+							<div class="aboutus__person-data">
+								<img class="aboutus__person-img" src="/dist/img/person-male.svg" alt="Icon person" />
+								<h3 class="aboutus__person-name">Dawid Kowalski</h3>
+							</div>
+							<p class="aboutus__text">
+								"Wow, muszę przyznać, że zorganizowanie podróży za pomocą Traveel.pl było naprawdę fajnym
+								doświadczeniem!
+							</p>
+						</div>
+					</div>
+					<div class="aboutus__person" data-aos="fade-right">
+						<div class="aboutus__person-info">
+							<div class="aboutus__person-data">
+								<img class="aboutus__person-img" src="/dist/img/person-male.svg" alt="Icon person" />
+								<h3 class="aboutus__person-name">Tomek Kowalski</h3>
+							</div>
+							<p class="aboutus__text">
+								"Wow, ta podróż to był strzał w dziesiątkę! Szczerze, nie spodziewałem się, że będzie tak ekscytująco.
+								Bez dwóch zdań - warto było! 😎😎😎"
+							</p>
+						</div>
+					</div>
+					<div class="aboutus__person" data-aos="fade-left">
+						<div class="aboutus__person-info">
+							<div class="aboutus__person-data">
+								<img class="aboutus__person-img" src="/dist/img/person-male.svg" alt="Icon person" />
+								<h3 class="aboutus__person-name">Dawid</h3>
+							</div>
+							<p class="aboutus__text">Wszystko poszło gładko, a podróż była absolutnie niesamowita. Polecam!"</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contact" id="contact">
+				<h2 class="contact__title"><span>Skontaktuj</span> się z nami</h2>
+				<div class="contact__container" data-aos="fade-up" data-aos-anchor-placement="top-center">
+					<div class="contact__info">
+						<p class="contact__text">Możesz skontaktować się z nami poprzez:</p>
+						<ul>
+							<li class="contact__text">
+								<img class="contact__icon" src="/dist/img/navPhone.svg" alt="Ikona telefonu" />
+								<a href="tel:123456789">123-456-789</a>
+							</li>
+							<li class="contact__text">
+								<img class="contact__icon" src="/dist/img/email.svg" alt="Ikona emailu" />
+								<a href="mailto:adres-email@example.com">info@example.com</a>
+							</li>
+							<li class="contact__text">Adres: ul. Przykładowa 123, 00-000 Warszawa</li>
+						</ul>
+					</div>
+					<div class="contact__form-box">
+						<h3 class="contact__form-title">Formularz kontaktowy</h3>
+						<form>
+							<div class="contact__form-group">
+								<label class="contact__label" for="username">Imię i nazwisko:</label>
+								<input
+									class="contact__input"
+									type="text"
+									id="username"
+									name="username"
+									required
+									placeholder="Podaj imię i nazwisko" />
+								<p class="contact__error-text">error</p>
+							</div>
+							<div class="contact__form-group">
+								<label class="contact__label" for="email">Email:</label>
+								<input class="contact__input" type="email" id="email" name="email" required placeholder="Podaj email" />
+								<p class="contact__error-text">error</p>
+							</div>
+							<div class="contact__form-group">
+								<label class="contact__label" for="message">Wiadomość:</label>
+								<textarea
+									class="contact__textarea"
+									id="message"
+									name="message"
+									rows="4"
+									required
+									maxlength="2000"
+									placeholder="Podaj treść wiadomości"></textarea>
+								<p class="contact__error-text">error</p>
+							</div>
+							<button class="contact__btn contact__send-btn" type="submit">Wyślij</button>
+							<div class="contact__popup">
+								<p class="contact__text">Formularz został poprawnie wysłany!</p>
+								<button class="contact__btn contact__btn-close">Zamknij</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<footer class="footer">
+	<div class="footer__info">
+		<ul class="footer__links">
+			<h4 class="footer__title">Kontakt</h4>
+			<li class="footer__link">
+				<img class="footer__icon" src="/dist/img/navPhone.svg" alt="Ikona telefonu" />
+				<a href="tel:123456789">123-456-789</a>
+			</li>
+			<li class="footer__link">
+				<img class="footer__icon" src="/dist/img/email.svg" alt="Ikona emailu" />
+				<a href="mailto:adres-email@example.com">info@example.com</a>
+			</li>
+			<li class="footer__link">Adres: ul. Przykładowa 123, 00-000 Warszawa</li>
+		</ul>
+		<ul class="footer__links">
+			<h4 class="footer__title">Informacje</h4>
+			<li class="footer__link"><a href="#">Top 4</a></li>
+			<li class="footer__link"><a href="#">Kategorie</a></li>
+			<li class="footer__link"><a class="footer__block">Last minute</a></li>
+		</ul>
+		<ul class="footer__links">
+			<h4 class="footer__title">Kanały</h4>
+			<li class="footer__link"><a class="footer__block">Faceebok</a></li>
+			<li class="footer__link"><a class="footer__block">Instagram</a></li>
+			<li class="footer__link"><a class="footer__block">Twitter</a></li>
+			<li class="footer__link"><a class="footer__block">Blog</a></li>
+		</ul>
+		<ul class="footer__links">
+			<h4 class="footer__title">Inne</h4>
+			<li class="footer__link"><a href="./license.kit">Licencje</a></li>
+			<li class="footer__link"><a class="footer__block" href="#">Polityka prywatności</a></li>
+		</ul>
+	</div>
+	<p>&copy; <time class="footer__currentDate"></time></p>
+</footer>
+
+		</main>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+<script src="/dist/js/slick.min.js"></script>
+<script src="/dist/js/main.min.js"></script>
+
+	</body>
+</html>

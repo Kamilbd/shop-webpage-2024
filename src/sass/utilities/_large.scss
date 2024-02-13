@@ -1,0 +1,149 @@
+@mixin large {
+	@media screen and (min-width: 1200px) {
+		.nav {
+			justify-content: space-evenly;
+
+			&__link,
+			&__links-col {
+				font-size: var(--fs-700);
+			}
+			&__links {
+				position: relative;
+				flex-direction: row;
+				width: auto;
+				height: auto;
+				background: none;
+				transform: rotate(0);
+				transition: all 0s;
+			}
+			&__links &__link::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 3px;
+				width: 0;
+				background-color: var(--gold);
+				transition: all 0.3s;
+			}
+			&__links &__link:hover::before {
+				width: 100%;
+			}
+			&__destinations-box {
+				position: absolute;
+				display: block;
+				padding: 1em 2em;
+				background-color: var(--cream);
+				border-radius: 4px;
+				transform: translateY(50%);
+				transition: all 0.3s;
+				opacity: 0;
+				visibility: hidden;
+				z-index: -5;
+			}
+
+			&__acitive-destinations-btn {
+				transform: translateY(0);
+				visibility: visible;
+				opacity: 1;
+				z-index: 5;
+			}
+
+			&__btns,
+			&__btn {
+				display: none;
+			}
+		}
+		.header {
+			background-image: url('/dist/img/bg-large-header.jpg');
+			&::before {
+				content: '';
+				border-right: 50vw solid transparent;
+				transform: translateX(-20%);
+			}
+			&__text-box {
+				transform: translateY(25%);
+				line-height: 40px;
+			}
+			&__title {
+				font-size: var(--title-700);
+			}
+			&__text {
+				max-width: 700px;
+				font-size: var(--title-400);
+			}
+		}
+		.topPlaces {
+			&__cards-box {
+				max-width: 1000px;
+			}
+			&__column-info {
+				padding: 4em 2em;
+				min-height: 300px;
+				max-width: 450px;
+			}
+			&__column-text {
+				text-align: left;
+			}
+			&__btn:hover {
+				background-color: var(--seaBlue);
+				border: 1px solid var(--seaBlue);
+			}
+		}
+		.aboutus {
+			&__info-box {
+				max-width: 60%;
+				max-width: 1000px;
+			}
+			&__animation-box {
+				display: block;
+			}
+			&__persons {
+				width: 100%;
+				max-width: 1450px;
+			}
+			&__person-info {
+				flex-direction: row-reverse;
+				margin-bottom: 0;
+			}
+		}
+		.contact {
+			&__container {
+				flex-direction: row;
+				max-width: 80%;
+			}
+			&__info {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+				height: 500px;
+				border-top-left-radius: 25px;
+				border-bottom-left-radius: 25px;
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+			&__form-box {
+				padding: 2em 4em;
+				height: 500px;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+			&__form-title {
+				padding: 1em 2em;
+			}
+			&__btn:hover {
+				background-color: var(--seaBlue);
+				color: var(--gold);
+				border: 1px solid var(--seaBlue);
+			}
+		}
+	}
+	.footer {
+		&__info {
+			justify-content: center;
+			max-width: 100%;
+		}
+	}
+}

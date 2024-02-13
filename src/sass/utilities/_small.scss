@@ -1,0 +1,97 @@
+@mixin small {
+	@media screen and (min-width: 375px) {
+		.header {
+			&__text-box {
+				max-width: 450px;
+			}
+			&__title {
+				font-size: var(--title-400);
+			}
+			&__text {
+				max-width: 500px;
+				font-size: var(--title-100);
+			}
+			&__link {
+				font-size: var(--fs-400);
+			}
+		}
+		.topPlaces {
+			&__title {
+				padding: 2em 1em;
+				color: var(--cream);
+				font-size: var(--title-400);
+				text-align: center;
+			}
+			&__cards-box {
+				max-width: 375px;
+			}
+
+			&__second-title {
+				color: var(--cream);
+				font-size: var(--title-100);
+			}
+
+			&__column-info {
+				max-width: 370px;
+				height: 320px;
+			}
+			&__column-title {
+				margin-top: 1em;
+				padding: 0.4em;
+				font-size: var(--fs-700);
+			}
+			&__column-text {
+				margin-top: 1em;
+				font-size: var(--fs-400);
+			}
+		}
+		.aboutus {
+			&__info-box {
+				max-width: 90%;
+			}
+			&__text {
+				font-size: var(--fs-400);
+			}
+			&__person-info {
+				padding: 2em 0;
+				justify-content: center;
+				justify-content: space-between;
+			}
+			&__person-img {
+				max-width: 60px;
+			}
+		}
+		.contact {
+			&__title {
+				font-size: var(--title-400);
+			}
+			&__text {
+				font-size: var(--fs-700);
+			}
+			&__form-box {
+				padding: 2em;
+				width: 100%;
+				max-width: 500px;
+			}
+			&__form-title {
+				font-size: var(--title-100);
+			}
+			&__label {
+				font-size: var(--fs-400);
+			}
+			&__input {
+				font-size: var(--fs-400);
+			}
+			&__textarea {
+				max-width: 500px;
+				font-size: var(--fs-700);
+			}
+			&__popup {
+				max-width: 450px;
+			}
+			&__popup &__text {
+				font-size: var(--fs-400);
+			}
+		}
+	}
+}
