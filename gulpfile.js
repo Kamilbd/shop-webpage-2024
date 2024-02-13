@@ -24,10 +24,15 @@ const paths = {
 	imgDest: './dist/img',
 };
 
+function errorHandler(err) {
+	console.error(err.message);
+	this.emit('end');
+}
+
 function sassCompiler() {
 	return src(paths.sass)
 		.pipe(sourcemaps.init({ loadMaps: true }))
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass().on('error', errorHandler))
 		.pipe(autoprefixer())
 		.pipe(cssnano())
 		.pipe(rename({ suffix: '.min' }))
@@ -46,7 +51,7 @@ function javaScript() {
 }
 
 function convertImages() {
-	return src(paths.img).pipe(imagemin()).pipe(dest(paths.imgDest));
+	return src(paths.img).pipe(imagemin().on('error', errorHandler)).pipe(dest(paths.imgDest));
 }
 
 function handleKits() {
@@ -67,7 +72,10 @@ function startBrowserSync() {
 
 function watchForChanges() {
 	watch('./*.html').on('change', reload);
-	watch([paths.html, paths.sass, paths.js], series(handleKits, sassCompiler, javaScript)).on('change', reload);
+	watch([paths.html, paths.sass, paths.js], series(cleanStuff, handleKits, sassCompiler, javaScript)).on(
+		'change',
+		reload
+	);
 	watch(paths.img, convertImages).on('change', reload);
 }
 
