@@ -29,8 +29,8 @@ function errorHandler(err) {
 	this.emit('end');
 }
 
-function sassCompiler() {
-	return src(paths.sass)
+function sassCompiler(done) {
+	src(paths.sass)
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(sass().on('error', errorHandler))
 		.pipe(autoprefixer())
@@ -38,45 +38,49 @@ function sassCompiler() {
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write())
 		.pipe(dest(paths.sassDest));
+	done();
 }
 
-function javaScript() {
-	return src(paths.js)
+function javaScript(done) {
+	src(paths.js)
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(babel({ presets: ['@babel/env'] }))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write())
 		.pipe(dest(paths.jsDest));
+	done();
 }
 
-function convertImages() {
-	return src(paths.img).pipe(imagemin().on('error', errorHandler)).pipe(dest(paths.imgDest));
+function convertImages(done) {
+	src(paths.img).pipe(imagemin()).pipe(dest(paths.imgDest));
+	done();
 }
 
-function handleKits() {
-	return src(paths.html).pipe(kit()).pipe(dest(paths.dist));
+function handleKits(done) {
+	src(paths.html).pipe(kit()).pipe(dest(paths.dist));
+	done();
 }
 
-function cleanStuff() {
-	return src(paths.dist, { allowEmpty: true }).pipe(clean());
+function cleanStuff(done) {
+	src(paths.dist, { allowEmpty: true }).pipe(clean());
+	done();
 }
 
-function startBrowserSync() {
+function startBrowserSync(done) {
 	browserSync.init({
 		server: {
 			baseDir: './',
 		},
 	});
+	done();
 }
 
-function watchForChanges() {
+function watchForChanges(done) {
 	watch('./*.html').on('change', reload);
-	watch([paths.html, paths.sass, paths.js], series(cleanStuff, handleKits, sassCompiler, javaScript)).on(
-		'change',
-		reload
-	);
+	watch([paths.html, paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript)).on('change', reload);
 	watch(paths.img, convertImages).on('change', reload);
+	done();
 }
 
 function concatScripts() {
@@ -90,8 +94,6 @@ function minifySlickJS() {
 		.pipe(dest('dist/js'));
 }
 
-exports.build = series(
-	cleanStuff,
-	parallel(handleKits, sassCompiler, javaScript, convertImages, concatScripts, minifySlickJS)
-);
-exports.default = series(exports.build, startBrowserSync, watchForChanges);
+const mainFunctions = parallel(handleKits, sassCompiler, javaScript, convertImages, concatScripts, minifySlickJS);
+exports.cleanStuff = cleanStuff;
+exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
